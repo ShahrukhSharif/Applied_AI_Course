@@ -1,0 +1,15 @@
+list1 = list(range(-10,10))
+
+# 1. Using Lambda Function (postive value i want)
+
+pos_list = list(filter(lambda x:(x>0),list1)) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# 2. sqaure of the list
+
+sqr_list = list(map(lambda x:x**2,list1))   # [100, 81, 64, 49, 36, 25, 16, 9, 4, 1, 0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# 3. Product of list
+
+list = [1,2,3,4,5]
+from functools import reduce
+prd_list = reduce(lambda x,y:x*y,list)  # 120
