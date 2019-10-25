@@ -1,0 +1,77 @@
+'''
+Data Science Most Useful Functions ---
+A. filter ---->  It's Operate on each elemnt of the list And select and descard some values
+B. map    ----> It's also Operate on each element in the list and implement that function
+C. reduce ----> It's oprate on sequnce of elements
+'''
+
+list1 = list(range(-10,10))
+
+# 1.All Postive Value i want from list
+
+list2 = []
+for i in list1:
+    if(i>0):
+        list2.append(i)
+        
+print(list2)    # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# filter Inbuild Function
+
+def positive_number(num):
+    if(num>0):
+        return num
+    
+result = list(filter(positive_number,list1))
+print(result)    #[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+#2 . All Squre values i want in list
+
+list3 = []
+for i in list1:
+    list3.append(i**2)
+    
+print(list3)   # [100, 81, 64, 49, 36, 25, 16, 9, 4, 1, 0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+
+# Another Way is Using Map
+
+def square_number(num):
+    return num**2
+
+y = list(map(square_number,list1))
+    
+print(y)  # [100, 81, 64, 49, 36, 25, 16, 9, 4, 1, 0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+
+#3. reduce Always Apply on Sequence of Element
+
+listx = [1,2,3,4,5]
+from functools import reduce
+def product(x,y):
+    return x*y
+
+z = reduce(product,listx)
+
+count = 1
+for i in listx:
+    count = count*i
+    
+print(count)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
