@@ -37,6 +37,15 @@ print(file.tell())
 file.seek(0)
 print(file.read())
 
+# ReadLines Functions
+file = open('my.txt','r')
+print(file.readline())
+
+# Read All Lines
+file = open('my.txt','r')
+print(file.readlines())
+
+
 
 # Directory Managment of Understanding
 
@@ -44,6 +53,12 @@ import os
 print(os.getcwd())
 
 print(os.chdir("C:/Users/AITeam/Desktop"))
+
+
+print(os.getcwd.__doc__)
+
+
+
 
 
 
